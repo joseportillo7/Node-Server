@@ -1,23 +1,16 @@
 const express = require('express')
+const { Controllers } = require('../controllers')
 
 const router = express.Router()
 
 
-router.get('/', (req, res) =>{
-    res.send('Welcome to my first node application')
-})
+router.get('/',Controllers.getData)
 
-router.post('/',(req,res)=>{
-    res.send('Welcome to my first node application')
-})
+router.post('/',Controllers.postData)
 
-router.put('/',(req,res)=>{
-    res.send('Welcome to  my first node application')
-})
+router.put('/',Controllers.putData)
 
-router.delete('/',(req,res)=>{
-    res.send('Welcome to my first node application')
-})
+router.delete('/',Controllers.deleteData)
 
 module.exports = router;
 
