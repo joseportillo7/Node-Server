@@ -1,17 +1,26 @@
 # ABOUT PROJECT
-This project helps to create a node structure application
+This project helps to create a node structure application with Docker
 
 
 ***
 
 ## Installation
-1. Clone repository or download files
-2. npm install - installing all dependencies into package file
-3. create a .env file and put in those code lines
+*You must have Docker installed on your local computer
+
+1. Clone repository using the follow step: 
 ```
-PORT = "any port"
+git clone https://github.com/joseportillo7/Node-Server.git
 ```
-4. run project with node app.js
+2. Access downloaded folder
+```
+cd <project's folder name>
+```
+3. Copy the next code lines and execute on your terminal
+```
+docker build -t node-server:1.1.0 .
+docker run -p 3000:3000 -d node-server:1.1.0
+```
+4. You can get access to http://localhost:3000
 
 ***
 ## Usage
